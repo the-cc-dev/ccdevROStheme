@@ -1,0 +1,8 @@
+.cc-panel {
+    @include dp(inline-block,relative);
+    @include wh(100%, auto);
+    @include mp(15px,15px);
+    @include tl(0,0);
+    
+    border: 1px solid black;
+}

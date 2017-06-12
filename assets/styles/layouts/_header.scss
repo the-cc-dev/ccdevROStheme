@@ -1,0 +1,385 @@
+header#rosheader {
+    @include dp(block,fixed);
+    @include mp(0,0);
+    @include tl(0,0);
+    @include wh(100vw,40px);
+    
+    z-index: 100;
+    background-color: $color1;
+    color: white;
+    
+    nav.navbar {
+        @include fill();
+        
+        div.navbar-header {
+            @include fill();
+            
+            div.header-quick-contact {
+                @include dp(inline-block, relative);
+                @include wh(auto,40px);
+                text-align: center;
+                float: right;
+                margin-right: 40px;
+
+                a.qc-link {
+                    z-index: 101;
+                    @include dp(inline-block,relative);
+                    float: left;
+
+                    div.qc-icon { 
+                        @include wh(40px,40px);
+                        @include mp(0,10px);
+                        span.fa {
+                            @include wh(20px,20px);
+                            color: white;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                a.qc-link:hover {
+                    div.qc-icon {
+                        span.fa {color: $color3;}
+                    }
+                    
+                }
+                //a.call-link { div.phone-icon { span.fa-phone {}}}
+                //a.mail-link { div.mail-icon { span.fa-envelope {}}}
+            }
+            
+            button.mobileToggle {
+                @include wh(40px,40px);
+                @include mp(0,5px);
+                right: 0px;
+                background-color: $color1;
+                cursor: pointer;
+                
+                span.navbar-toggler-icon {
+                    @include wh(20px,20px);
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+            a.navbar-brand {
+                @include wh(200px,40px);
+                @include mp(0,5px);
+                
+                img.header-brand-image {
+                }
+            }
+        }
+        div#sbContainer {
+            div.navbar-nav {
+                div.widget {
+                    
+                    background-color: $color1;
+                    
+                    h2.widget-title {display: none;}
+                }
+                div.widget_nav_menu {
+                    div.menu-primary-container {
+                        ul.menu {
+                            @include mp(0,0);
+                            
+                            list-style: none;
+                            text-align: center;
+                            
+                            li.menu-item {
+                                @include mp(0,10px);
+                                height: 40px;
+                                border-top: 1px solid $color2;
+                                text-transform:uppercase;    
+                                a {color: white;
+                                    font-size: 16px;}
+                            }
+                            li.current-menu-item {
+                                
+                                a { }
+                            }
+                            li.menu-item:hover {
+                                a {}
+                            }
+                        }
+                    }
+                }
+                div.widget_search {
+                    @include dp(inline-block, relative);
+                    @include wh(100%,40px);
+                    @include tl(0,0);
+                    @include mp(0,0);
+                    
+                    border-top: 1px solid $color2;
+                    
+                    div.search-form-container {
+                        @include fill();
+                        
+                        form.search-form {
+                            @include mp(0,5px);
+                            div.input-group {
+                                @include wh(100%, 30px);
+                                
+                                input.search-field {}
+                                button.search-submit {
+                                    @include wh(30px,30px);
+                                    @include mp(0,0);
+                                    
+                                    span.fa {
+                                        @include wh(20px,20px);
+                                        color: $color1;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                div.widget_execphp {
+                    display: none;
+                    div.execphpwidget {}
+                }
+            }
+        }
+    }
+}
+
+//responsive to tablets 
+@media only screen and (min-width: 768px) { 
+    header#rosheader {
+        nav.navbar {
+            div.navbar-header {
+                button.mobileToggle {
+                    span.navbar-toggler-icon {}
+                }
+                a.navbar-brand {
+                    img.header-brand-image {}
+                }
+            }
+            div#sbContainer {
+                div.navbar-nav {
+                    div.widget {
+                        h2.widget-title {}
+                    }
+                    div.widget_nav_menu {
+                        div.menu-primary-container {
+                            ul.menu {
+                                li.menu-item {
+                                    a {}
+                                }
+                                li.current-menu-item {
+                                    a {}
+                                }
+                                li.menu-item:hover {
+                                    a {}
+                                }
+                            }
+                        }
+                    }
+                    div.widget_search {
+                        padding: 7.5px 250px;
+                        div.search-form-container {
+                            form.search-form {
+                                div.input-group {
+                                    input.search-field {}
+                                    button.search-submit {
+                                        span.fa {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.widget_execphp {
+                        div.execphpwidget {
+                            div.header-quick-contact {
+                                a.qc-link {
+                                    div.qc-icon {
+                                        span.fa {}
+                                    }
+                                }
+                                a.call-link {
+                                    div.phone-icon {
+                                        span.fa-phone {}
+                                    }
+                                }
+                                a.mail-link {
+                                    div.mail-icon {
+                                        span.fa-envelope {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive to bootstrap navbar change breakpoint
+@media only screen and (min-width: 992px) { 
+    header#rosheader {
+        nav.navbar {
+            div.navbar-header {
+                div.header-quick-contact {
+                    margin-right: 10px;
+                    a.qc-link {
+                        div.qc-icon { 
+                            span.fa {}
+                        }
+                    }
+                    a.call-link {
+                        div.phone-icon {
+                            span.fa-phone {}
+                        }
+                    }
+                    a.mail-link {
+                        div.mail-icon {
+                            span.fa-envelope {}
+                        }
+                    }
+                }
+                    button.mobileToggle {
+                    display: none;
+                    span.navbar-toggler-icon {}
+                }
+                a.navbar-brand {
+                    img.header-brand-image {}
+                }
+            }
+            div#sbContainer {
+                @include dp(inline-block,absolute);
+                @include tl(0px,310px);
+                div.navbar-nav {
+                    
+                    div.widget {
+                        h2.widget-title {}
+                    }
+                    div.widget_nav_menu {
+                        @include wh(auto,45px);
+                        margin-right: 30px;
+                        background-color: transparent;
+                        
+                        div.menu-primary-container {
+                            height: 45px;
+                            ul.menu {
+                                height: 45px;
+                                li.menu-item {
+                                    display: inline-block;
+                                    border-width: 0px;
+                                    height: 35px;
+                                    @include mp(5px,5px);
+                                    border-radius: 5px;
+                                
+                                    a {
+                                        font-size: 14px;
+                                    }
+                                }
+                                li.current-menu-item {
+                                    border: 1px solid $color2;
+                                    a {}
+                                }
+                                li.menu-item:hover {
+                                    a {
+                                        color: $color3;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.widget_search {
+                        border-width: 0px;
+                        background-color: transparent;
+                        width: 200px;
+                        padding: 7.5px;
+                        
+                        div.search-form-container {
+                            form.search-form {
+                                div.input-group {
+                                    input.search-field {}
+                                    button.search-submit {
+                                        span.fa {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.widget_execphp {
+                        
+                        div.execphpwidget {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive to laptops
+@media only screen and (min-width: 1024px) { 
+    header#rosheader {
+        nav.navbar {
+            div.navbar-header {
+                button.mobileToggle {
+                    span.navbar-toggler-icon {}
+                }
+                a.navbar-brand {
+                    img.header-brand-image {}
+                }
+            }
+            div#sbContainer {
+                div.navbar-nav {
+                    div.widget {
+                        h2.widget-title {}
+                    }
+                    div.widget_nav_menu {
+                        div.menu-primary-container {
+                            ul.menu {
+                                li.menu-item {
+                                    a {}
+                                }
+                                li.current-menu-item {
+                                    a {}
+                                }
+                                li.menu-item:hover {
+                                    a {}
+                                }
+                            }
+                        }
+                    }
+                    div.widget_search {
+                        div.search-form-container {
+                            form.search-form {
+                                div.input-group {
+                                    input.search-field {}
+                                    button.search-submit {
+                                        span.fa {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.widget_execphp {
+                        div.execphpwidget {
+                            div.header-quick-contact {
+                                a.qc-link {
+                                    div.qc-icon {
+                                        span.fa {}
+                                    }
+                                }
+                                a.call-link {
+                                    div.phone-icon {
+                                        span.fa-phone {}
+                                    }
+                                }
+                                a.mail-link {
+                                    div.mail-icon {
+                                        span.fa-envelope {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

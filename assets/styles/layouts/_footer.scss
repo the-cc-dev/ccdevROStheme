@@ -1,0 +1,22 @@
+footer#footer {
+    z-index: 1;
+    @include dp(inline-block,relative);
+    width: 100%;
+    min-height: 50px;  
+    //background-color: $color1;
+    
+    div.footer-sidebar-container {
+        div.widget {
+            h2.widget-title {}
+        }
+        div.widget_execphp {
+            div.execphpwidget {
+                div.footer-logo-container {
+                    display: inline-block;
+                    padding: 20px;
+                    img.footer-logo {}
+                }
+            }
+        }
+    }
+}

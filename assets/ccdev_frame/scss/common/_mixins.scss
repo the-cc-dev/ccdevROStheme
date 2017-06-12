@@ -1,0 +1,28 @@
+
+//quick display & position
+@mixin dp($d,$p){
+    display: $d;
+    position: $p;
+}
+//quick top & left
+@mixin tl($t,$l){
+    top:$t;
+    left:$l;
+}
+//quick width & height
+@mixin wh($w,$h){
+    width:$w;
+    height:$h;
+}
+//quick margin & padding
+@mixin mp($m,$p){
+    margin:$m; 
+    padding:$p;
+}
+//quickly completely fill parent element
+@mixin fill(){
+    @include dp(inline-block,relative);
+    @include tl(0,0);
+    @include wh(100%,100%);
+    @include mp(0,0);
+}

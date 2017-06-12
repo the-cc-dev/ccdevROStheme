@@ -1,0 +1,187 @@
+body.home {
+    header#rosheader {
+        @include dp(inline-block,relative);
+        
+    }
+    div.wrap.container {
+        @include dp(inline-block,relative);
+        width: 100%;
+        @include mp(0,0);
+        div.content.row {
+            main.main {
+                div.body-sidebar {
+                    div.widget {
+                        h2.widget-title {
+                            display: none;
+                        }
+                    }
+                    div.widget_metaslider_widget {
+                        //display: none;
+                        div.metaslider {
+                            div {
+                                div {
+                                    ul.slides {
+                                        
+                                        padding: 10px;
+                                        li.ms-image {
+                                            a {
+                                                img {border-radius: 10px;}
+                                            }
+                                            div.caption-wrap {
+                                                height: 100%;
+                                                border-radius: 10px;
+                                                
+                                                div.caption {
+                                                    center {
+                                                        h2.slider-h2 {}
+                                                        p.slider-p {display: none;}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+                div.home-content {
+                    @include mp(10px,0);
+                    div.card {
+                        div.card-title {
+                            h1 {}
+                        }
+                        div.card-subtitle {
+                            h4 {}
+                        }
+                        div.card-text {
+                            p {}
+                            ul {
+                                li {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer#footer {
+        @include dp(inline-block,relative);
+    }
+    @media (min-width: 768px) {
+        header#rosheader {}
+        div.wrap.container {
+            div.content.row {
+                main.main {
+                    div.body-sidebar {
+                        div.widget {
+                            h2.widget-title {}
+                        }
+                        div.widget_metaslider_widget {
+                            display: inline-block;
+                            div.metaslider {
+                                div {
+                                    div {
+                                        ul.slides {
+                                            li.ms-image {
+                                                a {
+                                                    img {}
+                                                }
+                                                div.caption-wrap {
+                                                    div.caption {
+                                                        center {
+                                                            h2.slider-h2 {}
+                                                            p.slider-p {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer#footer {}
+    }
+    @media (min-width: 992px) {
+        header#rosheader {}
+        div.wrap.container {
+            div.content.row {
+                main.main {
+                    div.body-sidebar {
+                        div.widget {
+                            h2.widget-title {}
+                        }
+                        div.widget_metaslider_widget {
+                            div.metaslider {
+                                div {
+                                    div {
+                                        ul.slides {
+                                            li.ms-image {
+                                                a {
+                                                    img {}
+                                                }
+                                                div.caption-wrap {
+                                                    div.caption {
+                                                        center {
+                                                            h2.slider-h2 {}
+                                                            p.slider-p {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer#footer {}
+    }
+    @media (min-width: 1024px) {
+        header#rosheader {}
+        div.wrap.container {
+            div.content.row {
+                main.main {
+                    div.body-sidebar {
+                        div.widget {
+                            h2.widget-title {}
+                        }
+                        div.widget_metaslider_widget {
+                            div.metaslider {
+                                div {
+                                    div {
+                                        ul.slides {
+                                            li.ms-image {
+                                                a {
+                                                    img {}
+                                                }
+                                                div.caption-wrap {
+                                                    div.caption {
+                                                        center {
+                                                            h2.slider-h2 {}
+                                                            p.slider-p {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer#footer {}
+    }
+}
+

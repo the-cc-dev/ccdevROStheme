@@ -1,0 +1,215 @@
+header#rosheader {
+    //@include dp(inline-block,relative);
+    //@include tl(0,0);
+    //width: 100%;
+    nav.navbar {
+        //background-color: $color1;
+        //color: white;
+        //@include wh(100%,50px);
+        //@include mp(0,0);
+        div.navbar-header {
+            button.navbar-toggler-right {
+                //cursor: pointer;
+                //@include wh(40px,40px);
+                //padding: 10px;
+                //text-align: center;
+                //top: 4px;
+                //background-color: $color1;
+                span.navbar-toggler-icon {
+                    //color: white;
+                    //@include wh(20px,20px);
+                }
+            }
+            a.navbar-brand {
+                //padding-bottom: 0px;
+                img.mobile-brand {
+                    //height: 40px;
+                    //padding: 5px;
+                }
+            }
+        }
+        div#sbContainer {
+            //z-index: 100;
+            div.navbar-nav {
+                //width: 100%;
+                div.widget {
+                    //background-color: $color1;
+                    h2.widget-title {
+                        //display: none;
+                    }
+                    div.menu-primary-container {
+                        ul.menu {
+                            //list-style: none;
+                            //@include mp(0,0);
+                            //text-align: center;
+                            li.menu-item {
+                                //text-transform:uppercase;
+                                //border-top: 1px solid $color2;
+                                //padding: 10px 0;
+                                a {
+                                    //color: white;
+                                }
+                            }
+                        }
+                    }
+                    div.search-form-container {
+                        border-top: 1px solid $color2;
+                        @include wh(100%,45px);
+                        form.search-form {
+                            @include dp(inline-block,relative);
+                            @include tl(0,0);
+                            @include wh(100%,100%);
+                            @include mp(0,5px);
+                            div.input-group {
+                                //@include wh(100%, 35px);
+                                input.search-field {
+                                    height: 35px;
+                                }
+                                button.search-submit {
+                                    background-color: white;
+                                    @include wh(35px,35px);
+                                    padding: 0px;
+                                    span.fa {
+                                        @include wh(15px,15px);
+                                        color: $color1;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }   
+                    div.execphpwidget {
+                        border-top: 1px solid $color2;
+                        height: 45px;
+                        div.header-quick-contact {
+                            a.call-link {
+                                span.fa {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {  
+    header#rosheader {  
+        nav.navbar {
+            div.navbar-header {
+                @include dp(inline-block, relative);
+                @include wh(20%,100%);
+                @include tl(0,0);
+                @include mp(0,0);
+                button.navbar-toggler-right {
+                    display: none;
+                    span.navbar-toggler-icon {}
+                }
+                a.navbar-brand {
+                    @include dp(inline-block,relative);
+                    @include wh(100%,100%);
+                    @include tl(0,0);
+                    @include mp(0,0);
+                    img.mobile-brand {
+                        @include wh(90%,100%);
+                        margin-left: 5%;
+                    }
+                }  
+            }
+            div#sbContainer {
+                @include wh(70%,100%);
+                text-align: center;
+                div.navbar-nav { 
+                @include wh(90%,100%);
+                    margin: 0 5%;
+                    float: right;
+                    
+                    div.widget {
+                        height: 100%;
+                        h2.widget-title {}
+                    }
+                    div.widget_nav_menu {
+                        float: left;
+                        div.menu-primary-container {
+                            @include wh(100%,100%);
+                            ul.menu { 
+                            @include wh(100%,100%);
+                                li.menu-item { 
+                                    height: 100%;
+                                    display: inline-block;
+                                    border-width: 0px;
+                                    padding: 10px;
+                                    a {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.widget_search {
+                        @include dp(inline-block,relative);
+                        float: right;
+                        right: 0px;
+                        div.search-form-container {
+                            border-width: 0px;
+                            form.search-form {
+                                height: 35px;
+                                width: 100%;
+                                div.input-group {
+                                    width: 50%;
+                                    margin: 0 25%;
+                                    padding: 0 5px;
+                                    input.search-field {
+                                    }
+                                    button.search-submit {
+                                        background-color: white;
+                                        @include wh(40px,40px);
+                                        padding: 0px;
+                                        span.fa {
+                                            @include wh(20px,20px);
+                                            color: $color1;
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    div.execphpwidget {
+                        @include wh(50px,100%);
+                        div.header-quick-contact {
+                            @include wh(100%,100%);
+                            a.call-link {
+                                @include wh(50px,50px);
+                                div.phone-icon {
+                                    @include wh(50px,50px);
+                                    span.fa {
+                                        margin-top: 10px;
+                                        color: white;
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                            a.mail-link {
+                                @include wh(50px,50px);
+                                div.mail-icon {
+                                    @include wh(50px,50px);
+                                    span.fa {
+                                        margin-top: 10px;
+                                        color: white;
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

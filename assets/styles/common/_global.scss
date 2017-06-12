@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    transition: .25s ease all 0s;
+}
+.sans {
+    font-family: $font-sans;
+}
+.serif {
+    font-family: $font-serif;
+}
+body {
+    min-width: 320px;
+    font-family: $font-serif;
+    background-color: $color2;
+    
+    a {text-decoration: none;}
+    div.wrap.container {
+        div.content.row {
+            @include dp(block,relative);
+            @include wh(100%,auto);
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6, li {font-family: $font-sans;}
+
